@@ -39,7 +39,7 @@
 			$('> .wrapper > ul > li', divobj).height(options.height);
 			$('> .wrapper > ul > li', divobj).css('display', 'block');
 			$('> .wrapper > ul > li', divobj).css('float', 'left');
-
+			
 
 			var originalmarginright = parseInt($('> .wrapper > ul > li', divobj).css('marginRight'));
 			var originalmarginleft = parseInt($('> .wrapper > ul > li', divobj).css('marginLeft'));
@@ -47,8 +47,12 @@
 			var totallis = $('> .wrapper > ul > li', this).length;
 			var currentposition = 0;
 			var liwidth = $('> .wrapper > ul > li:first', divobj).outerWidth(true);
+			var imgwidth = $('> .wrapper > ul > li > img', divobj).outerWidth(true);
+			$(' .wrapper > ul > li > div > div > img').attr("width", liwidth - 60);
+			$('.vid_title').attr("width", (liwidth * 0.8));
 			var additionalmargin = 0;
 			var totalwidth = liwidth + additionalmargin;
+						
 
 			$(window).resize(function(e){
 				var divwidth = $(divobj).width();
@@ -90,7 +94,9 @@
 					$('> .wrapper', divobj).width(totallis * totalwidth);
 					$('> ul', divobj).width(totallis * totalwidth);
 					$('> .wrapper', divobj).css('marginLeft', 0);
+					$('> .vid_title', divobj).css('width', '75' );
 					currentposition = 0;
+					
 				} else {
 					$('> .previous', divobj).show();
 					$('> .next', divobj).show();
