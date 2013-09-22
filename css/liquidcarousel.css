@@ -25,6 +25,7 @@
 	padding:0;
 }
 .liquid ul li {
+	position: relative;
 	width:126px;
 	padding:0 2px;
 	margin:0;
@@ -41,7 +42,48 @@ height: auto;
 
 
 .extra_info{
-	display: none;
+padding: 0px;
+margin: 0px;
+background:#272727;
+  position: absolute;
+   z-index: 900;
+  display: none;
+  width: 15em;
+  top: -1em;
+  left: 5em;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #272727;
+  text-align: left;
+  -moz-border-radius: 1em 1em 1em 1em;
+  border-radius: 1em 1em 1em 1em;
+}
+.heading  h3{
+text-align: center;
+line-height .8em;
+}
+.heading{
+background: white;
+text-align: left;
+font-size: 1.0em;
+line-height: 1.0em;
+text-decoration: none;
+color: black;
+font-weight: bold
+}
+
+.heading .type {
+text-align: left;
+}
+.heading .tags {
+text-align: left;
+}
+.heading .subtags{
+text-align: left;
+}
+.heading a{
+color: #272727;
+font-size: 1.0em;
 }
 
 a {

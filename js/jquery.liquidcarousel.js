@@ -7,7 +7,14 @@
  * http://www.gnu.org/licenses/gpl.html
  *
  */
-
+$('document').ready(function(){
+ $('.content_holder').mouseenter(function() {
+				$(this).children('.extra_info').fadeIn(500, "linear");
+		});
+		$('.content_holder').mouseleave(function() {
+			$(this).children('.extra_info').fadeOut(75, "linear");
+		});
+});
 (function($){
 	$.fn.liquidcarousel = function(options) {
 
@@ -46,10 +53,13 @@
 			var visiblelis = 0;
 			var totallis = $('> .wrapper > ul > li', this).length;
 			var currentposition = 0;
+			var ulheight = $('> .wrapper > ul', divobj).height();
 			var liwidth = $('> .wrapper > ul > li:first', divobj).outerWidth(true);
 			var imgwidth = $('> .wrapper > ul > li > img', divobj).outerWidth(true);
 			$(' .wrapper > ul > li > div > div > img').attr("width", liwidth - 60);
 			$('.vid_title').attr("width", (liwidth * 0.8));
+			$('.next').attr("height", (ulheight * 0.9));
+			$('.previous').attr("height", (ulheight * 0.9));
 			var additionalmargin = 0;
 			var totalwidth = liwidth + additionalmargin;
 						
