@@ -8,12 +8,13 @@
  *
  */
 $('document').ready(function(){
- $('.content_holder').mouseenter(function() {
-				$(this).children('.extra_info').fadeIn(500, "linear");
+	$('.content_holder').click(function() {
+		$(this).children('.extra_info').dialog({
+		height:500,
+		width: 400
 		});
-		$('.content_holder').mouseleave(function() {
-			$(this).children('.extra_info').fadeOut(75, "linear");
-		});
+	});
+
 });
 (function($){
 	$.fn.liquidcarousel = function(options) {
