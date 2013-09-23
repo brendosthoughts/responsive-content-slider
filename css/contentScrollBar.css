@@ -1,0 +1,133 @@
+.liquid {
+	background:#313b31 url('../images/bodybackground.png') repeat-y scroll 50% 0;
+	border:2px solid #19301C;
+	-moz-border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;
+	padding:10px 0;
+}
+.liquid .previous {
+	display:block;
+	height:126px;
+	width:64px;
+	background-image:url('../images/previous.png');
+	float:left;
+	margin:0;
+	padding:0;
+}
+.ad_bar{
+width: 700px;
+height: 15%;
+bottom: 0;
+background: red;
+position: absolute;
+}
+.liquid .next {
+	display:block;
+	height:126px;
+	width:64px;
+	background-image:url('../images/next.png');
+	float:right;
+	margin:0;
+	padding:0;
+}
+.liquid ul li {
+	position: relative;
+	width:126px;
+	padding:0 2px;
+	margin:0;
+	-moz-border-radius-bottomleft: 2em;
+	border-bottom-left-radius: 2em;
+	-moz-border-radius-bottomright: 2em;
+	border-bottom-right-radius: 2em;
+
+}
+.liquid ul li  img {
+width : 80%;
+height: auto;
+}
+
+
+.extra_info{ 
+float: left;
+overflow:visible;
+display: none;
+  
+}
+.vid_img{
+float: left;
+height: ;
+
+}
+.heading{
+line-height: 2em;
+float:left;
+padding: 0.1em;
+margin: 0.1em;
+text-align: left;
+font-size: 1.0em;
+line-height: 1.2em;
+text-decoration: none;
+color:#272727;
+font-weight: bold
+}
+.description{
+clear: both;
+}
+.heading .type {
+margin-top: 1em;
+color: white;
+text-align: left;
+}
+.heading .tags {
+margin-top: 1em; 
+color: white;
+text-align: left;
+}
+.heading .subtags{
+margin-top: 1em; 
+color: white;
+text-align: left;
+}
+.heading a:hover{
+background: red;
+}
+.heading a{
+  text-decoration: none;
+  background: white;
+  -moz-border-radius: 0.4em;
+  border-radius: 0.4em;
+  padding: 0.3em;
+  margin-right: 0.2em;
+  color: #272727;
+  font-size: 0.8em;
+}
+
+a {
+line-height: .8em;
+
+color: white;
+}
+.video{
+overflow:hidden;
+}
+.vid_title{
+ width: 80%;
+display:block;
+clear: both;
+   text-decoration: none;
+   color: white;
+   font-weight:bold;
+   font-size: .9em;
+   min-height: 2.8em;
+   max-height: 4em;
+	bottom: 0px;
+  text-align: center;
+   -moz-border-radius-bottomleft: 1em;
+	border-bottom-left-radius: 1em;
+	-moz-border-radius-bottomright: 1em;
+	border-bottom-right-radius: 1em;
+
+	
+
+}
