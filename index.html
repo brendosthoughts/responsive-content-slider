@@ -4,18 +4,19 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="description" content="jQuery Liquid carousel plugin"/>
 	<title>jQuery Liquid Carousel plugin</title>
-	<link type='text/css' rel='stylesheet' href='css/liquidcarousel.css' />
-	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+	<link type='text/css' rel='stylesheet' href='css/contentScrollBar.css' />
+	  <link rel="stylesheet" href="js/jquery-ui-1.10.3.custom/css/custom/jquery-ui-1.10.3.custom.css" /> />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
 	<script type="text/javascript" src="js/jquery.liquidcarousel.js"></script>
 	<script type="text/javascript" src="js/SwipeTouch/jquery.touchSwipe.js"></script>
 	<script type="text/javascript">
 
 	$(document).ready(function() {
 		
-
-
-
-			$('#liquid1').liquidcarousel({height:200, duration:100, hidearrows:false});
+		$('#liquid1').liquidcarousel({height:200, duration:100, hidearrows:false});
 			$('#liquid2').liquidcarousel({height:200, duration:100, hidearrows:false});
 		});
 	 
@@ -30,18 +31,22 @@
 	<div class="wrapper">
 		<ul>
 			<li class="content_holder"> 
-					<div class='video'><a href='playVideo.php?video=13083'>
-						<img class="vid_cover" src='images/01.jpg'/> <span class="vid_title" >Let's talk crap. Seriously.</span> </a>
+					<div class='video'>
+						<img class="vid_cover" src='images/01.jpg'/> <span class="vid_title" >Let's talk crap. Seriously.</span> 
 					</div>
-					<div class="extra_info">	
-						<div class="heading"> <h3>  The newest video </h3>
-							<span class="type">Types: <a href="type.php?type=Talks.php">Talks </a></span>
-							<span class="tags"><br>Tags:<a href="type.php?type=Talks.php">Science</a><a href="type.php?type=Talks.php">Technology</a></span>
-							<span class="subtags"><br>SubTags: <a href="type.php?type=Talks.php">Biometrics</a><a href="type.php?type=Talks.php">Medical Research</a></span>
+					<div class="extra_info" title="The newest video">	
+					<a href="play_video.php"><img class="vid_img" src ="images/01.jpg"/></a>
+						<div class="heading">
+							<span class="type">Types: <a href="type.php?type=Talks.php">Talks </a></span> 
+							<span class="tags"><br><br>Tags: <a href="type.php?type=Talks.php">Science</a><a href="type.php?type=Talks.php">Technology</a></span> 
+							<span class="subtags"><br><br>SubTags: <a href="type.php?type=Talks.php">Biometrics</a><a href="type.php?type=Talks.php">Medical Research</a></span> 
 						</div>
 						<div class="description"> 
 						This is a short expanation of the video ... try and limit this to at mos tcra scqd;usnclbjbasbceiwlcascdwdfacss 
 						avfdgtrs dwenfd de fsdc fea dw fdefde wef fewfew affew f wf wfefe fwef ... <a href="link2vid"> Check it out</a>
+						</div>
+						<div class="ad_bar">
+						 There will be a footer add here if I can figure out how to load one with AJAX ! 
 						</div>
 					</div>
 				
@@ -50,8 +55,9 @@
 					<div class='video'><a href='playVideo.php?video=13083'>
 						<img class="vid_cover" src='images/02.jpg'/> <span class="vid_title" > Video 2.</span> </a>
 					</div>
-					<div class="extra_info">	
-						<div class="heading"> <h3>Video 2</h3>
+					<div class="extra_info" title ="Video 2">	
+					<a href="play_video.php"><img class="vid_img" src ="images/01.jpg"/></a>
+						<div class="heading"> 
 							<span class="type">Types: <a href="type.php?type=Talks.php">Talks </a></span>
 							<span class="tags"><br>Tags:<a href="type.php?type=Talks.php">Science</a><a href="type.php?type=Talks.php">Technology</a></span>
 							<span class="subtags"><br>SubTags: <a href="type.php?type=Talks.php">Biometrics</a><a href="type.php?type=Talks.php">Medical Research</a></span>
@@ -68,8 +74,9 @@
 					<div class='video'><a href='playVideo.php?video=13083'>
 						<img class="vid_cover" src='images/03.jpg'/> <span class="vid_title" >A third video</span> </a>
 					</div>
-					<div class="extra_info">	
-						<div class="heading"> <h3>A third Video</h3> 
+					<div class="extra_info" title="A third video">	
+					<a href="play_video.php"><img class="vid_img" src ="images/03.jpg"/></a>
+						<div class="heading"> 
 							<span class="type">Types: <a href="type.php?type=Talks.php">Talks </a></span>
 							<span class="tags"><br>Tags:<a href="type.php?type=Talks.php">Science</a><a href="type.php?type=Talks.php">Technology</a></span>
 							<span class="subtags"><br>SubTags: <a href="type.php?type=Talks.php">Biometrics</a><a href="type.php?type=Talks.php">Medical Research</a></span>
@@ -86,8 +93,9 @@
 					<div class='video'><a href='playVideo.php?video=13083'>
 						<img class="vid_cover" src='images/04.jpg'/> <span class="vid_title"  >This is a video with a longer title</span> </a>
 					</div>
-					<div class="extra_info">	
-						<div class="heading"> <h3>This is a video with a longer title</h3>						
+					<div class="extra_info" title="This is a video with a longer title">
+<a href="play_video.php"><img class="vid_img" src ="images/04.jpg"/></a>					
+						<div class="heading" > 
 							<span class="type">Types: <a href="type.php?type=Talks.php">Talks </a></span>
 							<span class="tags"><br>Tags:<a href="type.php?type=Talks.php">Science</a><a href="type.php?type=Talks.php">Technology</a></span>
 							<span class="subtags"><br>SubTags: <a href="type.php?type=Talks.php">Biometrics</a><a href="type.php?type=Talks.php">Medical Research</a></span>
@@ -104,8 +112,9 @@
 					<div class='video'><a href='playVideo.php?video=13083'>
 						<img class="vid_cover" src='images/05.jpg'/> <span class="vid_title" >This is a video with a much much much much much much longer title</span> </a>
 					</div>
-					<div class="extra_info">	
-						<div class="heading"> <h3>This is a video with a much much much much much much longer title</h3>
+					<div class="extra_info" title="sample title five mother fucker!">	
+						<a href="play_video.php"><img class="vid_img" src ="images/05.jpg"/></a>
+						<div class="heading"> 
 							<span class="type">Types: <a href="type.php?type=Talks.php">Talks </a></span>
 							<span class="tags"><br>Tags:<a href="type.php?type=Talks.php">Science</a><a href="type.php?type=Talks.php">Technology</a></span>
 							<span class="subtags"><br>SubTags: <a href="type.php?type=Talks.php">Biometrics</a><a href="type.php?type=Talks.php">Medical Research</a></span>
@@ -122,8 +131,9 @@
 					<div class='video'><a href='playVideo.php?video=13083'>
 						<img class="vid_cover" src='images/06.jpg'/> <span class="vid_title" >Another video for the look</span> </a>
 					</div>
-					<div class="extra_info">	
-						<div class="heading"> <h3>Let's talk crap. Seriously.</h3> 
+					<div class="extra_info" title="let's talk crap seriosuly!">	
+					<a href="play_video.php"><img class="vid_img" src ="images/06.jpg"/></a>
+						<div class="heading"> 
 							<span class="type">Types: <a href="type.php?type=Talks.php">Talks </a></span>
 							<span class="tags"><br>Tags:<a href="type.php?type=Talks.php">Science</a><a href="type.php?type=Talks.php">Technology</a></span>
 							<span class="subtags"><br>SubTags: <a href="type.php?type=Talks.php">Biometrics</a><a href="type.php?type=Talks.php">Medical Research</a></span>
