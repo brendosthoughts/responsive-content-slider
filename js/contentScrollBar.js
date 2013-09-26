@@ -17,6 +17,27 @@ $('document').ready(function(){
 	});
 
 });
+var currentposition=0;
+function move_next(totallis,visiblelis,currentposition,totalwidth){
+					if (totallis <= visiblelis) {
+						currentposition = 0;
+					} else if ((currentposition + visiblelis) < totallis) {
+						currentposition += 1;
+					} else if ((currentposition + visiblelis) >= totallis -1) {
+						currentposition = totallis - visiblelis;
+					}	
+					return currentposition;
+
+}
+
+function move_previous(currentposition){
+					if ((currentposition - 1) > 0) {
+						currentposition -= 1;
+					} else if ((currentposition - 1) <= 0) {
+						currentposition = 0;
+					}
+					return currentposition;
+}
 (function($){
 	$.fn.liquidcarousel = function(options) {
 
@@ -117,16 +138,48 @@ $('document').ready(function(){
 					$('> ul', divobj).width(visiblelis * totalwidth);
 				}
 			});
-
+			$('.wrapper > ul').swipe( {
+				swipeStatus:function(event, phase, direction, distance, duration, fingers)
+				{
+					var str = "<h4>Swipe Phase : " + phase + "<br/>";
+					str += "Direction from inital touch: " + direction + "<br/>";
+					str += "Distance from inital touch: " + distance + "<br/>";
+					str += "Duration of swipe: " + duration + "<br/>";
+					str += "Fingers used: " + fingers + "<br/></h4>";
+          //Here we can check the:
+          //phase : 'start', 'move', 'end', 'cancel'
+          //direction : 'left', 'right', 'up', 'down'
+          //distance : Distance finger is from initial touch point in px
+          //duration : Length of swipe in MS 
+          //fingerCount : the number of fingers used
+					if (phase!="cancel" && phase!="end") {
+						if (duration<5000)
+						str +="Under maxTimeThreshold.<h3>Swipe handler will be triggered if you release at this point.</h3>"
+						else
+						str +="Over maxTimeThreshold. <h3>Swipe handler will be canceled if you release at this point.</h3>"
+						if (distance<100)
+							str +="Not yet reached threshold.  <h3>Swipe will be canceled if you release at this point.</h3>"
+						else
+						str +="Threshold reached <h3>Swipe handler will be triggered if you release at this point.</h3>"
+					}
+					if (direction=="left"){
+						currentposition = move_previous(currentposition);
+						$('> .wrapper > ul', divobj).stop();
+						$('> .wrapper > ul', divobj).animate({'marginLeft': -(currentposition * totalwidth)}, options.duration);
+					}
+					else if(direction=="right"){
+						currentposition = move_previous(currentposition);
+						$('> .wrapper > ul', divobj).stop();
+						$('> .wrapper > ul', divobj).animate({'marginLeft': -(currentposition * totalwidth)}, options.duration);
+					}
+				},
+				threshold:100,
+				maxTimeThreshold:5000,
+				fingers:'all'
+			});
 			$('> .next', divobj).mouseover(function(){
 				next_timer = setInterval(function() {
-					if (totallis <= visiblelis) {
-						currentposition = 0;
-					} else if ((currentposition + visiblelis) < totallis) {
-						currentposition += 1;
-					} else if ((currentposition + visiblelis) >= totallis -1) {
-						currentposition = totallis - visiblelis;
-				}	
+					currentposition = move_next(totallis,visiblelis,currentposition,divobj,totalwidth,options);
 					$('> .wrapper > ul', divobj).stop();
 					$('> .wrapper > ul', divobj).animate({'marginLeft': -(currentposition * totalwidth)}, options.duration);
 				},500);
@@ -139,11 +192,7 @@ $('document').ready(function(){
 
 			$('> .previous', divobj).mouseover(function(){
 				previous_timer = setInterval(function() {
-					if ((currentposition - 1) > 0) {
-						currentposition -= 1;
-					} else if ((currentposition - 1) <= 0) {
-						currentposition = 0;
-					}
+					currentposition = move_previous(currentposition);
 					$('> .wrapper > ul', divobj).stop();
 					$('> .wrapper > ul', divobj).animate({'marginLeft': -(currentposition * totalwidth)}, options.duration);
 				},500);
