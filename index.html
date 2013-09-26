@@ -15,9 +15,9 @@
 	<script type="text/javascript">
 
 	$(document).ready(function() {
-		
-		$('#liquid1').liquidcarousel({height:200, duration:100, hidearrows:false});
-			$('#liquid2').liquidcarousel({height:200, duration:100, hidearrows:false});
+		var screenh = $(window).height()/4;
+		$('#liquid1').liquidcarousel({height: (screenh), duration:100, hidearrows:false});
+			$('#liquid2').liquidcarousel({height: (screenh), duration:100, hidearrows:false});
 		});
 	 
 	</script>

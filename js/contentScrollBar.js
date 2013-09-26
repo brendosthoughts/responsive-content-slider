@@ -46,6 +46,7 @@ $('document').ready(function(){
 			$('> .wrapper > ul', divobj).css('display', 'block');
 
 			$('> .wrapper > ul > li', divobj).height(options.height);
+			$('> .wrapper > ul > li', divobj).width(options.height/1.75);
 			$('> .wrapper > ul > li', divobj).css('display', 'block');
 			$('> .wrapper > ul > li', divobj).css('float', 'left');
 			
