@@ -1,3 +1,6 @@
 [submodule "js/SwipeTouch"]
 	path = js/SwipeTouch
 	url = https://github.com/mattbryson/TouchSwipe-Jquery-Plugin.git
+[submodule "js/TouchSwipe"]
+	path = js/TouchSwipe
+	url = https://github.com/mattbryson/TouchSwipe-Jquery-Plugin.git
